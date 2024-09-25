@@ -41,7 +41,7 @@ everytime the mouse moves over it. Stranger things have been done. First thing w
 use ClassWizard to create a new class derived from `CButton` called 
 `CMyButton`.
 
-![Adding a new class](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/SubclassDemo2.gif) 
+![Adding a new class](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/subclassdemo2.gif) 
 
 Deriving from `CButton` within the MFC framework has a lot of advantages,
 with the biggest one being we don't actually have to add a single line of code for our
@@ -63,7 +63,7 @@ we find the mouse is no longer in the control we turn off the timer and redraw t
 Use ClassWizard to add a WM\_MOUSEMOVE and WM\_TIMER message handlers mapped to `OnMouseMove` 
 and `OnTimer` respectively.
 
-![Adding message handlers](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/SubclassDemo3.gif) 
+![Adding message handlers](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/subclassdemo3.gif) 
 
 ClassWizard will add the following code to your new button class:
 
@@ -153,7 +153,7 @@ but rather override the `CWnd::DrawItem` virtual function. This function is
 that can be called (it ASSERT's if you try). This function is designed to be overriden 
 and used by derived classes only.
 
-![Adding DrawItem override](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/SubclassDemo5.gif) 
+![Adding DrawItem override](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/subclassdemo5.gif) 
 
 Use the ClassWizard to add a `DrawItem` override and add in the following
 code
@@ -240,7 +240,7 @@ Congratulations - you now have a `Cbutton` derived class!
 
 In this example I'm working with a dialog on which I've placed a button control:
 
-![a button](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/SubclassDemo1.gif) 
+![a button](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/subclassdemo1.gif) 
 
 We let the normal dialog creation routines create the dialog with the control, and
 use the `DDX_...` routines to subclass the control with our new class. To
@@ -248,7 +248,7 @@ do this simply use ClassWizard to add a member variable to you dialog class atta
 to your button control (in my case it's ID is `IDC_BUTTON1`), and choose the variable
 as a Control type, with class name `CMyButton`.
 
-![subclassing the control](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/SubclassDemo4.gif) 
+![subclassing the control](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/subclassdemo4.gif) 
 
 The ClassWizard generates a `DDX_Control` call in your dialog's
 `DoDataExchange` function. `DDX_Control` calls 
@@ -314,7 +314,7 @@ such as flat buttons, or justified text, but scope is there for you to do whatev
 you wish. If you compile and run the accompanying code you'll see a simple button 
 that turns bright yellow when the mouse passes over it.
 
-![The finished product](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/SubclassDemo6.gif) 
+![The finished product](https://raw.githubusercontent.com/ChrisMaunder/subclassdemo/master/docs/assets/subclassdemo6.gif) 
 
 Notice that we only really overrode the drawing functionality, and intercepted the
 mouse movement functions (but passed these on to the default handler). This means that
